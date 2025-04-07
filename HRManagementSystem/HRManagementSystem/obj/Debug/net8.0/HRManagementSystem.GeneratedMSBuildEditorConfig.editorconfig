@@ -1,0 +1,225 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HRManagementSystem
+build_property.RootNamespace = HRManagementSystem
+build_property.ProjectDir = C:\Users\Orange\Desktop\HR Management System\HR-Management-System\HRManagementSystem\HRManagementSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Orange\Desktop\HR Management System\HR-Management-System\HRManagementSystem\HRManagementSystem
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Employee/Attendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQXR0ZW5kYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Employee/CreateLeaveReq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlTGVhdmVSZXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Employee/CreateVacReq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlVmFjUmVxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Employee/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Employee/EmpLeaveRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wTGVhdmVSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Employee/EmployeeTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVUYXNrcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Employee/EmpVacRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wVmFjUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Home/OurTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPdXJUZWFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Home/Testimonials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXN0aW1vbmlhbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/CreateDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcQ3JlYXRlRGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/CreateManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcQ3JlYXRlTWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/ViewDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld0RlcGFydG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/ViewEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld0VtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/ViewEvaluation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld0V2YWx1YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/ViewFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld0ZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/ViewLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld0xlYXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/ViewManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld01hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/HR/ViewVaccation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld1ZhY2NhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/AddEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBZGRFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/AssignTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBc3NpZ25UYXNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/EditEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxFZGl0RW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/EvaluateEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxFdmFsdWF0ZUVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/LeaveRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxMZWF2ZVJlcXVlc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/VacRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxWYWNSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/ViewAttendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxWaWV3QXR0ZW5kYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/ViewEmployees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxWaWV3RW1wbG95ZWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Manager/ViewTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxWaWV3VGFza3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/User/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/User/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/User/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/User/ResetPasswordRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZXNldFBhc3N3b3JkUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/User/RoleSelection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSb2xlU2VsZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Shared/_EmployeeLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBsb3llZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-fibcxmhrzu
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Shared/_HRLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IUkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-7xu7x3uao6
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wub2r1u4vg
+
+[C:/Users/Orange/Desktop/HR Management System/HR-Management-System/HRManagementSystem/HRManagementSystem/Views/Shared/_ManagerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYW5hZ2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-ypyll6h6z6

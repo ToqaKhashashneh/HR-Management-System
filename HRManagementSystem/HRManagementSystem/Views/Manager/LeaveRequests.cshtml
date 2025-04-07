@@ -1,0 +1,73 @@
+﻿@model List<HRManagementSystem.Models.LeaveRequest>
+
+@{
+    ViewData["Title"] = "Leave Requests";
+    Layout = "_ManagerLayout";
+}
+
+@section Style {
+    <link href="~/css/Leave.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div>
+    <div class="flex">
+        <h2>Leave Requests</h2>
+        <a asp-controller="Manager" asp-action="DownloadLeaveRequestsPDF" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+            Download Leave Requests as PDF
+        </a>
+    </div>
+
+    <table class="table table-striped table-bordered mt-3">
+        <thead class="table-dark">
+            <tr class="align-middle text-center">
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Leave Date</th>
+                <th>Leave Hours</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th class="align-middle text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var leave in Model)
+            {
+                <tr class="align-middle text-center">
+                    <td>@(leave.Employee?.Name ?? "Unknown")</td>
+                    <td>@leave.LeaveType</td>
+                    <td>@leave.StartTime</td>
+                    <td>@leave.EndTime</td>
+                    <td>@leave.LeaveDate</td>
+                    <td>@leave.LeaveHours</td>
+                    <td>@(leave.Reason ?? "--")</td>
+                    <td>
+                        <span class="badge @(leave.Status == "Approved" ? "bg-success" : leave.Status == "Rejected" ? "bg-danger" : "bg-warning text-dark")">
+                            @leave.Status
+                        </span>
+                    </td>
+                    <td>
+                        @if (leave.Status == "Pending")
+                        {
+                            <form method="post" asp-action="ApproveLeave" asp-controller="Manager" class="d-inline">
+                                <input type="hidden" name="id" value="@leave.Id" />
+                                <button type="submit" class="btn btn-success btn-sm">
+                                    <i class="fas fa-check me-2"></i> Approve
+                                </button>
+                            </form>
+
+                            <form method="post" asp-action="RejectLeave" asp-controller="Manager" class="d-inline">
+                                <input type="hidden" name="id" value="@leave.Id" />
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-times me-2"></i> Reject
+                                </button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

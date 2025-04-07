@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|c:\\users\\orange\\desktop\\hr management system\\hr-management-system\\hrmanagementsystem\\hrmanagementsystem\\views\\manager\\leaverequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|solutionrelative:hrmanagementsystem\\views\\manager\\leaverequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|c:\\users\\orange\\desktop\\hr management system\\hr-management-system\\hrmanagementsystem\\hrmanagementsystem\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|solutionrelative:hrmanagementsystem\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|c:\\users\\orange\\desktop\\hr management system\\hr-management-system\\hrmanagementsystem\\hrmanagementsystem\\views\\manager\\vacrequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|solutionrelative:hrmanagementsystem\\views\\manager\\vacrequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|c:\\users\\orange\\desktop\\hr management system\\hr-management-system\\hrmanagementsystem\\hrmanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|solutionrelative:hrmanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|c:\\users\\orange\\desktop\\hr management system\\hr-management-system\\hrmanagementsystem\\hrmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|solutionrelative:hrmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|c:\\users\\orange\\desktop\\hr management system\\hr-management-system\\hrmanagementsystem\\hrmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{84491EB3-674C-4539-BE15-D23BB59BA970}|HRManagementSystem\\HRManagementSystem.csproj|solutionrelative:hrmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManagerController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Controllers\\ManagerController.cs",
+              "RelativeDocumentMoniker": "HRManagementSystem\\Controllers\\ManagerController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Controllers\\ManagerController.cs",
+              "RelativeToolTip": "HRManagementSystem\\Controllers\\ManagerController.cs",
+              "ViewState": "AgIAAJYCAAAAAAAAAAAgwIMCAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T20:25:41.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VacRequests.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Views\\Manager\\VacRequests.cshtml",
+              "RelativeDocumentMoniker": "HRManagementSystem\\Views\\Manager\\VacRequests.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Views\\Manager\\VacRequests.cshtml",
+              "RelativeToolTip": "HRManagementSystem\\Views\\Manager\\VacRequests.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T20:25:29.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "HRManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Program.cs",
+              "RelativeToolTip": "HRManagementSystem\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T18:33:11.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "HRManagementSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\appsettings.json",
+              "RelativeToolTip": "HRManagementSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-03T18:33:09.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HRManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HRManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAAAAIBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T17:57:37.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeaveRequests.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Views\\Manager\\LeaveRequests.cshtml",
+              "RelativeDocumentMoniker": "HRManagementSystem\\Views\\Manager\\LeaveRequests.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\HR Management System\\HR-Management-System\\HRManagementSystem\\HRManagementSystem\\Views\\Manager\\LeaveRequests.cshtml",
+              "RelativeToolTip": "HRManagementSystem\\Views\\Manager\\LeaveRequests.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADQAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T16:31:15.148Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

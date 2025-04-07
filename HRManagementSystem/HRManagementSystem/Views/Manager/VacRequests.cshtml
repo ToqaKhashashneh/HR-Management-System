@@ -1,0 +1,71 @@
+﻿@model IEnumerable<HRManagementSystem.Models.VaccationRequest>
+
+@{
+    ViewData["Title"] = "Vaccation Requests";
+    Layout = "_ManagerLayout";
+}
+
+@section Style {
+    <link href="~/css/Leave.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div>
+    <div class="flex">
+        <h2>Vaccation Requests</h2>
+        <a asp-controller="Manager" asp-action="DownloadVaccationRequestsPDF" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+            Download Vaccation Requests as PDF
+        </a>
+    </div>
+
+    <table class="table table-striped table-bordered mt-3">
+        <thead class="table-dark">
+            <tr class="align-middle text-center">
+                <th>Employee Name</th>
+                <th>Vaccation Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Vaccation Days</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th class="align-middle text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Vacc in Model)
+            {
+                <tr class="align-middle text-center">
+                    <td>@(Vacc.Employee?.Name ?? "Unknown")</td>
+                    <td>@Vacc.VaccType</td>
+                    <td>@Vacc.StartDate</td>
+                    <td>@Vacc.EndDate</td>
+                    <td>@Vacc.VaccDays</td>
+                    <td>@(Vacc.Reason ?? "--")</td>
+                    <td>
+                        <span class="badge @(Vacc.Status == "Approved" ? "bg-success" : Vacc.Status == "Rejected" ? "bg-danger" : "bg-warning text-dark")">
+                            @Vacc.Status
+                        </span>
+                    </td>
+                    <td>
+                        @if (Vacc.Status == "Pending")
+                        {
+                            <form method="post" asp-action="ApproveVacc" asp-controller="Manager" class="d-inline">
+                                <input type="hidden" name="id" value="@Vacc.Id" />
+                                <button type="submit" class="btn btn-success btn-sm me-1">
+                                    <i class="fas fa-check me-2"></i> Approve
+                                </button>
+                            </form>
+
+                            <form method="post" asp-action="RejectVacc" asp-controller="Manager" class="d-inline">
+                                <input type="hidden" name="id" value="@Vacc.Id" />
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-times me-2"></i> Reject
+                                </button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

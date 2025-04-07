@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CodeRush</title>
+    <link rel="icon" type="image/x-icon" href="~/img/logo22.png" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/animations.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/font-awesome.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/main.css" class="color-switcher-link" asp-append-version="true">
+    <script src="~/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- Add Font Awesome CDN link in the head section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/shop.css" class="color-switcher-link" asp-append-version="true">
+</head>
+
+
+
+<body>
+    <!--[if lt IE 9]>
+        <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+
+    <!-- search modal -->
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+        <div class="fw-messages-wrap ls p-normal">
+            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+            <!--
+            <ul class="list-unstyled">
+                <li>Message To User</li>
+            </ul>
+            -->
+
+        </div>
+    </div>
+    <!-- eof .modal -->
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+
+            <!-- template sections -->
+            <!--topline section visible only on small screens|-->
+            <div class="header_absolute s-pb-30">
+                <header class="page_header ds">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-3 col-11">
+                                <a href="index.html" class="logo text-center">
+                                    <img src="~/img/logo3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-xl-8 col-lg-6 col-1 text-sm-center">
+                                <!-- main nav start -->
+                                @{
+                                    string currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+                                }
+
+                                <nav class="top-nav">
+                                    <ul class="nav sf-menu">
+                                        <li class="@(currentAction == "Index" ? "active" : "")">
+                                            <a href="@Url.Action("Index", "Home")">Home</a>
+                                        </li>
+                                        <li class="@(currentAction == "About" ? "active" : "")">
+                                            <a href="@Url.Action("About", "Home")">About</a>
+                                        </li>
+                                        <li class="@(currentAction == "Services" ? "active" : "")">
+                                            <a href="@Url.Action("Services", "Home")">Services</a>
+                                        </li>
+                                        <li class="@(currentAction == "OurTeam" ? "active" : "")">
+                                            <a href="@Url.Action("OurTeam", "Home")">Our Team</a>
+                                        </li>
+                                        <li class="@(currentAction == "Testimonials" ? "active" : "")">
+                                        <a href="@Url.Action("Testimonials", "Home")">Testimonials</a>
+                                        </li>
+                                        <li class="@(currentAction == "Contact" ? "active" : "")">
+                                            <a href="@Url.Action("Contact", "Home")">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+
+
+                                <!-- eof main nav -->
+                            </div>
+                            <div class="col-xl-2 col-lg-3 text-lg-left text-xl-right d-none d-lg-block">
+                                <div class="header_phone">
+                                    <div class="login-button" style="float: right; margin-right: 20px;">
+                                        <a href="@Url.Action("RoleSelection", "User")" class="btn btn-login">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- header toggler -->
+                    <span class="toggle_menu">
+                        <span></span>
+                    </span>
+                </header>
+            </div>
+            <span class="toggle_menu_side header-slide">
+                <span></span>
+            </span>
+
+            <div class="divider-10 d-block d-sm-none"></div>
+
+
+
+            <div>
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+
+            <div id="footer"></div>
+
+            <footer class="page_footer ds s-pt-50 s-pb-30 s-pt-lg-100 s-pb-lg-50 c-gutter-60 footer-form">
+                <div class="container">
+                    <div class="row">
+                        <div class="divider-20 d-none d-xl-block"></div>
+
+                        <div class="col-md-6 col-lg-4 animate" data-animation="fadeInUp">
+                            <div class="widget widget_working_hours">
+                                <h3 class="widget-title">Our Hours</h3>
+                                <ul class="list-bordered">
+
+                                    <li class="row">
+                                        <div class="col-6">
+                                            Monday
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="color-darkgrey">9:00 - 20:00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-6">
+                                            Tuesday
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="color-darkgrey">9:00 - 21:00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-6">
+                                            Wednesday
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="color-darkgrey">9:00 - 21:00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-6">
+                                            Thursday
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="color-darkgrey">9:00 - 21:00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-6">
+                                            Friday
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="color-darkgrey">9:00 - 21:00</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="row">
+                                        <div class="col-6">
+                                            Saturday
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="color-darkgrey">9:00 - 20:00</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="row">
+                                        <div class="col-6">
+                                            Sunday
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="color-darkgrey">Closed</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 animate" data-animation="fadeInUp">
+                            <div class="widget widget_icons_list">
+                                <h3 class="widget-title">A little about us</h3>
+
+                                <p>A leading software company specialized in developing innovative technology solutions aimed at improving operational performance and achieving long-term success for its clients.</p>
+
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-4 animate" data-animation="fadeInUp">
+                            <div class="widget widget_contact_form">
+                                <h3 class="widget-title">Contact us</h3>
+                                <div class="widget widget_social_buttons">
+                                    <a href="#" class="fa fa-facebook color-bg-icon rounded-icon" title="facebook"></a>
+                                    <a href="#" class="fa fa-twitter color-bg-icon rounded-icon" title="twitter"></a>
+                                    <a href="#" class="fa fa-google color-bg-icon rounded-icon" title="google"></a>
+                                    <a href="#" class="fa fa-youtube-play color-bg-icon rounded-icon" title="youtube-play"></a>
+                                    <a href="#" class="fa fa-rss color-bg-icon rounded-icon" title="rss"></a>
+                                </div>
+
+                                <div class="media side-icon-box">
+                                    <div class="icon-styled color-main fs-14">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <p class="media-body"> 
+                                        <a href="#"><span>Jordan - Amman - King Hussein Business Park</span></a>
+                                    </p>
+                                </div>
+                                <div class="media side-icon-box">
+                                    <div class="icon-styled color-main fs-14">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <p class="media-body">
+                                        <a href="tel:+0777077970">0777077970</a>
+                                    </p>
+                                </div>
+
+                                <div class="media side-icon-box">
+                                    <div class="icon-styled color-main fs-14">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <p class="media-body">
+                                        <a href="#"><span>CodeCrush@gmail.com</span></a>
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+
+            <section class="page_copyright light-copy ls s-py-25 copyright-ls">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="divider-20 d-none d-lg-block"></div>
+                        <div class="col-md-12 text-center">
+                            <p>
+                                &copy; CodeCrush
+                                <span class="copyright_year">2025</span> All Rights Reserved
+                            </p>
+                        </div>
+                        <div class="divider-20 d-none d-lg-block"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+
+
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="~/js/compressed.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+
+
+
+
+</html>

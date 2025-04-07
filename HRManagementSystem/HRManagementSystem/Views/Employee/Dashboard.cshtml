@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_EmployeeLayout";
+}
+@section Style{
+    <link href="~/css/EmployeeDashboard.css" rel="stylesheet" asp-append-version="true" />
+}
+<div class="content">
+<div class="Tasks">
+    <div class="card">
+        <div>
+        <h3>To Do</h3>
+            <span class="value">@ViewData["toDoCount"]</span>
+        </div>
+        <div>
+            <i class="icon fa-solid fa-list"></i>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <h3>In progress</h3>
+            <span class="value">@ViewData["doingCount"]</span>
+        </div>
+        <div>
+            <img src="~/img/job-action.png" alt="Alternate Text" class="icon" />
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <h3>Completed</h3>
+            <span class="value">@ViewData["doneCount"]</span>
+        </div>
+        <div>
+            <i class="icon fa-regular fa-circle-check"></i>
+        </div>
+    </div>
+</div>
+
+<div class="attendance-section">
+    <div class="card">
+        <h2>Attendance For <strong id="current-month-year"></strong></h2>
+        <div class="attendance-grid">
+            <div class="attendance-box flex">
+                <img src="~/img/schedule.png" alt="Present">
+                <div>
+                        <p class="days present">@TempData["PresentDays"]&nbsp;days</p>
+                <p class="status">Present</p>
+                </div>
+            </div>
+            <div class="attendance-box flex">
+                <img src="~/img/schedule.png" alt="Absent">
+                <div>
+                        <p class="days absent">@TempData["AbsentDays"]&nbsp;days</p>
+                <p class="status">Absent</p>
+                </div>
+            </div>
+            <div class="attendance-box flex">
+                <img src="~/img/schedule.png" alt="Leaves Taken">
+                    <div>
+                        <p class="days leave">@TempData["LeaveDays"]&nbsp;days</p>
+                <p class="status">Leaves Taken</p>
+                </div>
+            </div>
+            <div class="attendance-box flex">
+                <img src="~/img/schedule.png" alt="Average Working Hours">
+                        <div>
+                        <p class="days hours">@TempData["AverageWorkingHours"]&nbsp;Hours</p>
+                <p class="status">Average Working Hours</p>
+                </div>
+            </div>
+            <div class="attendance-box flex">
+                    <img src="~/img/schedule.png" alt="Overtime Hours">
+                            <div>
+                        <p class="days overtime">@TempData["OvertimeHours"]&nbsp;Hours</p>
+                        <p class="status">Overtime Hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    <div class="evaluation-card">
+        <div class="card-header">
+            <h5>Annual Performance Evaluation</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>Status:</strong> @ViewData["Status"]</p>
+            <p><strong>Manager's Comment:</strong> @ViewData["Comment"]</p>
+            <p><strong>Evaluation Date:</strong> @ViewData["DateEvaluate"]</p>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/EmployeeDashboard.js" asp-append-version="true"></script>
+}

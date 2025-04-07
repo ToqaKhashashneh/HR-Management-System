@@ -1,0 +1,47 @@
+﻿@model IEnumerable<HRManagementSystem.Models.Manager>
+
+@{
+    ViewData["Title"] = "View Managers";
+    Layout = "_HRLayout";
+}
+@section Style {
+    <link href="~/css/Leave.css" rel="stylesheet" asp-append-version="true" />
+}
+<div class="flex">
+    <h2>Managers</h2>
+    <div>
+        <a asp-controller="HR" asp-action="DownloadManagersDataPDF" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+            Download Managers Data as PDF
+        </a>
+    <a asp-action="CreateManager" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+        +  Add New Manager
+    </a>
+    </div>
+</div>
+
+<div class="row" style="margin-left: 10px; margin-right: 10px;">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4" style="margin-bottom: 20px;">
+            <div class="card shadow-lg rounded" style="border: 1px solid #1f2732; margin: 10px;">
+                <div class="card-header text-center" style="background-color: #1f2732; color: white; font-weight: bold;">
+                    @item.Name
+                </div>
+                <div class="card-body">
+                    <div class="mb-2">
+                        <p><strong>Email:</strong> @item.Email</p>
+                        <p><strong>Address:</strong> @item.Address</p>
+                        <p><strong>Created At:</strong> @item.CreatedAt</p>
+                        <p><strong>Department:</strong> @item.Department.Name</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<style>
+
+
+

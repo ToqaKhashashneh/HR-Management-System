@@ -1,0 +1,78 @@
+﻿@model List<HRManagementSystem.Models.EmployeeViewModel>
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_ManagerLayout";
+}
+
+@section Style {
+    <link href="~/css/ManagerDashboard.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div class="dashboard">
+    <div class="card">
+        <i class="fas fa-users"></i>
+        <h2 id="employees">@ViewData["TotalEmployees"]</h2>
+        <p>Total Managed Employees</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-calendar-check"></i>
+        <h2 id="leaveRequests">@ViewData["PendingVacations_Leaves"]</h2>
+        <p>Pending Leave & Vacation Requests</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-calendar-times"></i>
+        <h2 id="feedbacks">@ViewData["totalAbsences"]</h2>
+        <p>Total Absences</p>
+    </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------->
+<div class="table-container">
+    <h5>Employees</h5>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Position</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Annual evaluation result</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.Name</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.Position</td>
+                    <td>@employee.Address</td>
+                    <td>
+                        @if (employee.IsAbsent)
+                        {
+                            <span class="badge bg-danger">Absent</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success">Present</span>
+                        }
+                    </td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(employee.EvaluationResult))
+                        {
+                            <span class="badge bg-primary">@employee.EvaluationResult</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Not Evaluated</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

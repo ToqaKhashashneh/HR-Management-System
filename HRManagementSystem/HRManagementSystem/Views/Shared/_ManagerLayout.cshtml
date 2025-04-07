@@ -1,0 +1,148 @@
+﻿@using Microsoft.AspNetCore.Hosting
+@using System.IO
+@inject IWebHostEnvironment WebHostEnvironment
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CodeRush</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/EmployeesLayout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HR_Management_System.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="~/img/logo22.png" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    @RenderSection("Style", required: false)
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="d-flex">
+            <!-- Sidebar -->
+            <nav class="sidebar" id="sidebar">
+                <div>
+                    <button class="close-sidebar" type="button" data-bs-dismiss="sidebar">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <img src="~/img/logo3.png" alt="logo" class="logo" />
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Dashboard" ? "active" : "")"
+                               asp-area="" asp-controller="Manager" asp-action="Dashboard">
+                                <img src="~/img/menu.png" alt="Dashboard" class="icon"/>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "ViewEmployees" ? "active" : "")"
+                               asp-area="" asp-controller="Manager" asp-action="ViewEmployees">
+                                <img src="~/img/employees.png" alt="Employees" class="icon" /> Employees
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "AssignTask" ? "active" : "")"
+                               asp-area="" asp-controller="Manager" asp-action="AssignTask">
+                                <img src="~/img/to-do-list.png" alt="Tasks" class="icon" /> Assign Task
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "EvaluateEmployee" ? "active" : "")"
+                               asp-area="" asp-controller="Manager" asp-action="EvaluateEmployee">
+                                <img src="~/img/evaluation.png" alt="Tasks" class="icon" /> Yearly Evaluation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "LeaveRequests" ? "active" : "")"
+                               asp-area="" asp-controller="Manager" asp-action="LeaveRequests">
+                                <img src="~/img/logout.png" alt="Request Leave" class="icon" />  Leave Requests
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "VacRequests" ? "active" : "")"
+                               asp-area="" asp-controller="Manager" asp-action="VacRequests">
+                                <img src="~/img/calendar.png" alt="Request Vacation" class="icon" />  Vacation Requests
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="sidebar-footer">
+                    <p>CodeRush <br> All rights reserved</p>
+                </footer>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Topbar with Hamburger Menu -->
+                <header class="topbar">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle sidebar">
+                        <span class="navbar-toggler-icon">☰</span>
+                    </button>
+                    <div class="user-menu">
+                        <div class="user-profile">
+                            @{
+                                var UserName = Context.Request.Cookies["UserName"] ?? Context.Session.GetString("UserName");
+                                var profileImage = Context.Request.Cookies["UserProfileImage"] ?? Context.Session.GetString("UserProfileImage");
+                                var defaultImage = "~/img/account.png";
+
+                                string imagePath = null;
+                                string imageUrl = defaultImage;
+
+                                if (!string.IsNullOrEmpty(profileImage) && WebHostEnvironment?.WebRootPath != null)
+                                {
+                                    imagePath = System.IO.Path.Join(WebHostEnvironment.WebRootPath, "img", profileImage);
+
+                                    if (System.IO.File.Exists(imagePath))
+                                    {
+                                        imageUrl = $"~/img/{profileImage}";
+                                    }
+                                }
+                            }
+                            <img src="@Url.Content(imageUrl)" alt="User">
+                            <span> @UserName<small>Manager</small></span>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <i class="fas fa-user icon text-black"></i>
+                                        <a class="dropdown-item" asp-controller="User" asp-action="Profile" asp-route-id="@Model.?Id">Profile</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-sign-out-alt icon text-danger"></i>
+                                        <a class="dropdown-item text-danger" asp-controller="User" asp-action="Logout">Sign out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Content Area -->
+                <main class="content">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.querySelector('.close-sidebar').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('show');
+        });
+            $(window).on('resize', function() {
+            if ($(window).width() >= 768) {
+                $('#sidebar').addClass('show');
+            } else {
+                $('#sidebar').removeClass('show');
+            }
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

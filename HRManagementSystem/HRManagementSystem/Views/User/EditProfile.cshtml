@@ -1,0 +1,71 @@
+﻿@inject IWebHostEnvironment WebHostEnvironment
+@{
+    var userRole = Context.Session.GetString("UserRole") ?? Context.Request.Cookies["UserRole"];
+
+    Layout = userRole switch
+    {
+        "HR" => "_HRLayout",
+        "Manager" => "_ManagerLayout",
+        _ => "_EmployeeLayout"
+    };
+    ViewData["Title"] = "Edit Profile";
+    var userImage = Context.Session.GetString("UserProfileImage") ?? Context.Request.Cookies["UserProfileImage"];
+    var userName = Context.Session.GetString("UserName") ?? Context.Request.Cookies["UserName"];
+    var userAddress = Context.Session.GetString("UserAddress") ?? Context.Request.Cookies["UserAddress"];
+
+    var defaultImage = Url.Content("~/img/account.png");
+    string imagePath = null;
+    string imageUrl = defaultImage;
+
+    if (!string.IsNullOrEmpty(userImage) && WebHostEnvironment?.WebRootPath != null)
+    {
+        imagePath = System.IO.Path.Combine(WebHostEnvironment.WebRootPath, "img", userImage);
+        if (System.IO.File.Exists(imagePath))
+        {
+            imageUrl = Url.Content($"~/img/{userImage}");
+        }
+    }
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Edit Profile</h3>
+                    <hr>
+
+                    <form asp-action="EditProfile" method="post" enctype="multipart/form-data">
+                        <div class="uxa-user-avatar mb-4">
+                            <img id="profilePreview" src="@imageUrl"
+                                 alt="User avatar" class="img-fluid rounded-circle border"
+                                 style="width: 120px; height: 120px;">
+                        </div>
+
+                        <div class="text-start">
+                        <div class="mb-3">
+                            <label class="fw-bold">Profile Image:</label>
+                            <input type="file" name="ProfileImage" class="form-control" id="imageUpload" accept="image/*">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="fw-bold">Name:</label>
+                            <input type="text" name="UserName" value="@userName" class="form-control" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="fw-bold">Address:</label>
+                            <input type="text" name="UserAddress" value="@userAddress" class="form-control" required>
+                        </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-lg" style="background-color:#1f2732; color:white;">Save Changes</button>
+                            <a asp-action="Profile" class="btn btn-lg btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

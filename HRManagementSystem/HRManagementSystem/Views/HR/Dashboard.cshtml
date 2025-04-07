@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "HR Dashboard";
+    Layout = "_HRLayout";
+}
+@section Style {
+    <link href="~/css/HRDashboard.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div class="dashboard">
+    <div class="card">
+        <i class="fas fa-users"></i>
+            <h2 id="employees">@ViewData["TotalEmployees"]</h2>
+        <p>Employees</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-user-tie"></i>
+            <h2 id="managers">@ViewData["TotalManagers"]</h2>
+        <p>Managers</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-building"></i>
+            <h2 id="departments">@ViewData["TotalDepartments"]</h2>
+        <p>Departments</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-calendar-check"></i>
+            <h2 id="leaveRequests">@ViewData["PendingVacations_Leaves"]</h2>
+            <p>Pending Leave & Vacation Requests</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-comment-alt"></i>
+            <h2 id="feedbacks">@ViewData["TotalFeedbacks"]</h2>
+        <p>Feedbacks</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-star"></i>
+            <h2 id="evaluations">@ViewData["TotalEvaluations"]</h2>
+        <p>Evaluations</p>
+    </div>
+</div>
+
+
+
+<!------------------------------------------------------------------------------------------------------------------------------>
+
+<div class="tables-wrapper">
+    <!-- القسم الأول: الجدول الأول والثاني -->
+    <div class="table-group">
+        <div class="table-container">
+            <h5>Departments & Managers</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Manager</th>
+                        <th>Employees Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dept in ViewData["Departments"] as IEnumerable<dynamic>)
+                    {
+                        <tr>
+                            <td>@dept.DepartmentName</td>
+                            <td>@(dept.ManagerName ?? "No Manager")</td>
+                            <td>@dept.EmployeesCount</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h5>Recent Leave Requests</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Leave Type</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Leave Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var leave in ViewData["LeaveRequests"] as IEnumerable<dynamic>)
+                    {
+                        <tr>
+                            <td>@leave.EmployeeName</td>
+                            <td>@leave.LeaveType</td>
+                            <td>@leave.StartTime</td>
+                            <td>@leave.EndTime</td>
+                            <td>@leave.LeaveDate</td>
+                            <td class="@leave.Status.ToLower()">@leave.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- القسم الثاني: الجدول الثالث والرابع -->
+    <div class="table-group">
+        <div class="table-container">
+            <h5>Employee Evaluations</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Manager</th>
+                        <th>Comments</th>
+                        <th>Evaluate Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        @foreach (var eval in ViewData["Evaluations"] as IEnumerable<dynamic>)
+                        {
+                        <tr>
+                            <td>@eval.EmployeeName</td>
+                            <td>@eval.Status</td>
+                            <td>@eval.Comment</td>
+                            <td>@eval.DateEvaluate.ToShortDateString()</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h5>Feedback Messages</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        @foreach (var feedback in ViewData["Feedbacks"] as IEnumerable<dynamic>)
+                        {
+                        <tr>
+                            <td>@feedback.Name</td>
+                            <td>@feedback.Email</td>
+                            <td>@feedback.Date.ToShortDateString()</td>
+                            <td>@feedback.Message</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

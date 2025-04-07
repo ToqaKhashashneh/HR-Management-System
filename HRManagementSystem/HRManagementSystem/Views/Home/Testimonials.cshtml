@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Testimonials";
+}
+
+@{
+    var testimonials = new List<dynamic>
+    {
+        new { Image = "~/img/Mohammed.jpg", Name = "Mohammed Frehat", Text = "This guys are awesome! It is hard to find a web design company who can actually listen and understand what you need. I’m 100% satisfied with this guys." },
+        new { Image = "~/img/Ayman.jpg", Name = "Ayman Al-Jaradat ", Text = "I needed more leads for my services. Pay-per-click, banners or maybe even brochures. They made an analysis of my existing site. It occurred that my website is banned with Google." },
+        new { Image = "~/img/Amer.jpg", Name = "Amer Abu Al Hayja", Text = "I highly recommend this company for all and any of your design needs. I am very happy with the new redesigned and restructured website they built for my moving company!" },
+        new { Image = "~/img/Salam.jpg", Name = "Salam Almomani", Text = "This guys are awesome! It is hard to find a web design company who can actually listen and understand what you need. I’m 100% satisfied with this guys." },
+        new { Image = "~/img/Batool.jpg", Name = "Batool Walid ", Text = "I needed more leads for my services. Pay-per-click, banners or maybe even brochures. They made an analysis of my existing site. It occurred that my website is banned with Google." },
+    };
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1>Testimonials</h1>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+					</li>
+					<li class="breadcrumb-item active">
+						Testimonials
+					</li>
+				</ol>
+				<div class="divider-15 d-none d-xl-block"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section class="ls s-pt-20 s-pb-130 s-pb-lg-100 testimonials-page">
+    <div class="container">
+        <div class="divider-75 d-none d-xl-block"></div>
+        <div class="row c-mb-lg-30 c-gutter-60">
+            @foreach (var testimonial in testimonials)
+            {
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <div class="testimonials-item">
+                            <img src="@Url.Content(@testimonial.Image)" alt="@testimonial.Name">
+                        </div>
+                        <h6>@testimonial.Name</h6>
+                        <p>@testimonial.Text</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="divider-70 d-none d-xl-block"></div>
+    </div>
+</section>
+

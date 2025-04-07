@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "Accounts";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Options</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="~/img/logo22.png" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/animations.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/font-awesome.css" asp-append-version="true">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .gradient-custom {
+            background-image: url(../img/breadcrumbs.jpg) !important;
+        }
+
+        .card{
+            background: #fff !important;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 500px !important;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            }
+
+        .card-body h2{
+            margin-bottom:40px !important;
+            color:#1f2732;
+        }
+
+        .btn{
+            background: #FF497C;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1);
+            padding:12px 20px;
+        }
+
+            .btn:hover {
+                opacity: 0.9;
+                transform: scale(1.05);
+                box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+                color: white;
+                background: #FF497C;
+            }
+
+        .row {
+            display: flex;
+            width: 100%; 
+            flex-wrap: wrap;
+        }
+
+            
+    </style>
+</head>
+<body>
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body ps-4 pe-4 text-center">
+
+                            <div class="mb-3 mt-md-4 ">
+
+                                <h2 class="fw-bolder">@Context.Session.GetString("UserRole") Login</h2>
+
+                                <form asp-action="Login" method="post">
+                                    <div class="form-outline form-white mb-4">
+                                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" required />
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(ViewBag.Message))
+                                    {
+                                        <div class="alert alert-danger">@ViewBag.Message</div>
+                                    }
+                                    <div class="d-flex justify-content-between align-items-center mb-5 gap-3">
+                                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+                                            <input class="woocommerce-form__input woocommerce-form__input-checkbox"
+                                                   name="rememberMe" type="checkbox" value="true">
+                                            <span style="color:#1f2732;">Remember me</span>
+                                        </label>
+                                        <a style="color:#1f2732;" asp-controller="User" asp-action="ResetPasswordRequest">Forgot password?</a>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-outline-light btn-lg px-5 mb-3">Login</button>
+                                </form>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+

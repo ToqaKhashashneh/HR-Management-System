@@ -1,0 +1,44 @@
+﻿.btn {
+    padding: 8px 25px !important;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center; 
+}
+
+.table {
+    margin: 30px;
+    max-width: 1200px;
+}
+
+.table-dark {
+    --bs-table-bg: #1f2732;
+    font-family: 'Arial', sans-serif;
+}
+.flex {
+    display: flex;
+    gap: 20px;
+    flex-direction: row !important;
+    justify-content: space-between;
+    margin:30px;
+}
+
+.btn-outline-primary {
+    color: #1f2732 !important;
+    border-color: #1f2732 !important;
+}
+
+.form-check-label:hover {
+    background-color: #1f2732 !important;
+    color: #fff !important;
+}
+
+.form-check-input:focus {
+    outline: none;
+    border-color: #1f2732;
+    box-shadow: 0 0 5px #1f2732;
+}
+
+.form-check-input:checked {
+    background-color: #1f2732;
+    border-color: #1f2732;
+}

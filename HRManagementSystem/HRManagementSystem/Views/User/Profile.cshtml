@@ -1,0 +1,76 @@
+﻿@inject IWebHostEnvironment WebHostEnvironment
+@{
+    var userRole = Context.Session.GetString("UserRole") ?? Context.Request.Cookies["UserRole"];
+
+    Layout = userRole switch
+    {
+        "HR" => "_HRLayout",
+        "Manager" => "_ManagerLayout",
+        _ => "_EmployeeLayout"
+    };
+    ViewData["Title"] = "My Profile";
+    var userImage = Context.Session.GetString("UserProfileImage") ?? Context.Request.Cookies["UserProfileImage"];
+    var userName = Context.Session.GetString("UserName") ?? Context.Request.Cookies["UserName"];
+    var userEmail = Context.Session.GetString("UserEmail") ?? Context.Request.Cookies["UserEmail"];
+    var userAddress = Context.Session.GetString("UserAddress") ?? Context.Request.Cookies["UserAddress"];
+    var userPosition = Context.Session.GetString("UserPosition") ?? Context.Request.Cookies["UserPosition"]; 
+
+    var defaultImage = Url.Content("~/img/account.png");
+
+    string imagePath = null;
+    string imageUrl = defaultImage; 
+
+    if (!string.IsNullOrEmpty(userImage) && WebHostEnvironment?.WebRootPath != null)
+    {
+        imagePath = System.IO.Path.Combine(WebHostEnvironment.WebRootPath, "img", userImage);
+
+        if (System.IO.File.Exists(imagePath))
+        {
+            imageUrl = Url.Content($"~/img/{userImage}");
+        }
+    }
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <div class="uxa-user-avatar mb-4">
+                        <img src="@imageUrl"
+                             alt="User avatar"
+                             class="img-fluid rounded-circle border"
+                             style="width: 120px; height: 120px;">
+                    </div>
+
+                    <h3 class="card-title">@userName</h3>
+                    <p class="text-muted">@userPosition</p>
+
+                    <hr>
+
+                    <div class="text-start">
+                        <div class="mb-3">
+                            <label class="fw-bold">Name:</label>
+                            <input value="@userName" class="form-control" readonly />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="fw-bold">Email:</label>
+                            <input value="@userEmail" class="form-control" readonly />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="fw-bold">Address:</label>
+                            <input value="@userAddress" class="form-control" readonly />
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a asp-action="EditProfile" class="btn btn-lg" style="background-color:#1f2732; color:white;" asp-controller="User" asp-action="EditProfile">Edit Profile</a>
+                        <a asp-action="ChangePassword" class="btn btn-lg" style="background-color:#1f2732; color:white;">Reset Password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

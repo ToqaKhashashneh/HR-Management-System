@@ -1,0 +1,118 @@
+﻿@model IEnumerable<HRManagementSystem.Models.Task>
+
+@{
+    ViewData["Title"] = "Tasks";
+    Layout = "_ManagerLayout";
+}
+
+@section Style {
+    <link href="~/css/Leave.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div>
+    <div class="flex">
+        <h2>Tasks for @ViewBag.EmployeeName</h2>
+    </div>
+
+    <table class="table table-striped table-bordered mt-3">
+        <thead class="table-dark">
+            <tr class="align-middle text-center">
+                <th>Task ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Due Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                <tr class="align-middle text-center">
+                    <td>@task.Id</td>
+                    <td>@task.Title</td>
+                    <td>@task.Description</td>
+                    <td>
+                        <span class="badge
+                                @(task.Status == "To Do" ? "bg-warning text-dark" :
+                                  task.Status == "Doing" ? "bg-primary" : "bg-success")">
+                            @task.Status
+                        </span>
+                    </td>
+                    <td>@task.DueDate</td>
+                    <td>
+                        <button type="button" class="btn btn-warning btn-sm me-3" data-bs-toggle="modal" data-bs-target="#editTaskModal-@task.Id">
+                            <i class="fas fa-edit me-2"></i> Edit
+                        </button>
+
+                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteTaskModal-@task.Id">
+                            <i class="fas fa-trash me-2"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+@foreach (var task in Model)
+{
+    <div class="modal fade" id="editTaskModal-@task.Id" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title"><i class="fas fa-edit"></i> Edit Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="EditTask" method="post">
+                        <input type="hidden" name="Id" value="@task.Id" />
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" name="Title" class="form-control" value="@task.Title" required />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Start Date</label>
+                            <input type="date" name="StartDate" class="form-control" value="@task.StartDate.ToString("yyyy-MM-dd")" required />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Due Date</label>
+                            <input type="date" name="DueDate" class="form-control" value="@task.DueDate.ToString("yyyy-MM-dd")" required />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Description</label>
+                            <textarea name="Description" class="form-control" required>@task.Description</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3" style="background-color: #1f2732 !important; border:1px solid #1f2732 !important;">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@foreach (var task in Model)
+{
+    <div class="modal fade mt-4" id="deleteTaskModal-@task.Id" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title"><i class="fas fa-exclamation-triangle"></i> Confirm Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Are you sure you want to delete the task <strong>@task.Title</strong>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form asp-action="DeleteTask" method="post">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash me-2"></i> Yes, Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}

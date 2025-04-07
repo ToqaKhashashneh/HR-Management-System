@@ -1,0 +1,59 @@
+﻿@model IEnumerable<HRManagementSystem.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employees";
+    Layout = "_ManagerLayout";
+}
+
+@section Style {
+    <link href="~/css/Leave.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div>
+    <div class="flex">
+        <h2>Employees</h2>
+
+        <div>
+            <a asp-controller="Manager" asp-action="DownloadEmployeesDataPDF" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+                Download Employees Data as PDF
+            </a>
+            <a asp-controller="Manager" asp-action="AddEmployee" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+                + Add New Employee
+            </a>
+        </div>
+    </div>
+
+    <table class="table table-striped table-bordered mt-3">
+        <thead class="table-dark">
+            <tr class="align-middle text-center">
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Position</th>
+                <th>Address</th>
+                <th class="align-middle text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr class="align-middle text-center">
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.Position</td>
+                    <td>@employee.Address</td>
+                    <td>
+                        <a asp-controller="Manager" asp-action="ViewTasks" asp-route-id="@employee.Id" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+                            View Tasks
+                        </a>
+                        <a asp-controller="Manager" asp-action="ViewAttendance" asp-route-id="@employee.Id" class="btn btn-primary" style="background-color: #1f2732; border: none !important; margin:3px 0px;">
+                            View Attendances
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
